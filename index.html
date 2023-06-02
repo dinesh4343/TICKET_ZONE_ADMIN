@@ -1,49 +1,238 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sign Up</title>
-  <link rel="stylesheet" type="text/css" href="regiser_style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICKET ZONE</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="path/to/aos.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
-  <div class="wrapper">
-    <div><span class="dot"></span></div>
-    <div><span class="dot"></span></div>
-    <div><span class="dot"></span></div>
-    <div><span class="dot"></span></div>
-    <div><span class="dot"></span></div>
-    <div><span class="dot"></span></div>
-    <div><span class="dot"></span></div>
-    <div><span class="dot"></span></div>
-    <div><span class="dot"></span></div>
-    <div><span class="dot"></span></div>
-    <div><span class="dot"></span></div>
-    <div><span class="dot"></span></div>
-    <div><span class="dot"></span></div>
-    <div><span class="dot"></span></div>
-    <div><span class="dot"></span></div>
-  </div>
-  <div class="container">
-    <h2>Sign Up</h2>
-    <form id="signup-form">
-      <input type="text" id="name" placeholder="Name" required>
-      <input type="date" id="dob" placeholder="D.O.B" required>
-      <input type="number" id="age" placeholder="Age" required>
-      <input type="number" id="mob" placeholder="Mobile.No" required>
-      <input type="text" id="address" placeholder="Address" required>
-      <input type="text" id="city" placeholder="City" required>
-      <input type="text" id="email" placeholder="Email" required>
-      <input type="password" id="password" placeholder="Password" required>
+  
+    <header>
+
+        <div class="bars">
+          <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon1" viewBox="0 0 16 16">
+            <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H7Zm1-6c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9c1.876 0 3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44.303 44.303 0 0 0 8 4Zm0-1c-1.837 0-3.353.107-4.448.22a.5.5 0 1 1-.104-.994A44.304 44.304 0 0 1 8 2c1.876 0 3.426.109 4.552.226a.5.5 0 1 1-.104.994A43.306 43.306 0 0 0 8 3Z"/>
+            <path d="M15 8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1V2.64c0-1.188-.845-2.232-2.064-2.372A43.61 43.61 0 0 0 8 0C5.9 0 4.208.136 3.064.268 1.845.408 1 1.452 1 2.64V4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v3.5c0 .818.393 1.544 1 2v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V14h6v1.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2c.607-.456 1-1.182 1-2V8ZM8 1c2.056 0 3.71.134 4.822.261.676.078 1.178.66 1.178 1.379v8.86a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5V2.64c0-.72.502-1.301 1.178-1.379A42.611 42.611 0 0 1 8 1Z"/>
+            </svg>
+            <a href="#" class="title">TICKET ZONE</a></div>
+            <a href="#" class="download-button">
+              Download App
+               
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
+              <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z"/>
+            </svg>
+            </a>
+            
+            <a href="#" class="bookticket">Book A Ticket</a>
+            <a href="#" class="findbus">Find A Bus</a>
+            <a href="#" class="profile-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+              </svg>
+            </a>            
+            <a href="https://dinesh4343.github.io/TICKET_ZONE_SIGN-IN/" target="_blank" class="signin">Sign In</a>
+            <a href="#" id="login">Login</a>    
+            <nav role="navigation">
+              <div id="menuToggle">
+                
+                <input type="checkbox">
+        
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                  <a href="#">Home</a>
+                  <a href="#">About</a>
+                  <a href="#">Book A Ticket</a>
+                  <a href="#">Find A Bus</a>
+                  <a href="#">Contact</a>
+                </ul>
+        
+                
+              </div>
+            </nav>
+        </div>
+          
+    </header>   
+
+    
+   
+
+    
+
+    <div class="container"  data-aos="fade-right">
+      <div class="card-box">
+        <div class="card-content">
+          <h2>New Bus Travel Method</h2>
+          <p>
+              India's leading provider of bus transportation technology is TICKET ZONE in your city.Streamline your journey, with our
+              TICKET ZONE App and live bus tracking on the TICKET ZONE App. 
+              Your one-stop shop for an easy and convenient travel experience
+          </p>
+          <button class="btn btn-info">Download App
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
+              <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z"/>
+            </svg>
+          </button>
+        </div>
+        <img class="card-image" src="img/g4.jpg">
+
+        </div>
+    </div>
+    
+    
+
+    <div class="info-card-box">
+      <div class="info-card1" data-aos="fade-down">
+        <div class="info-card1-image">
+          <img src="img/bus.jpg">
+        </div>
+        <div class="info-card1-content">
+          <h3>TRACK YOUR BUSES</h3>
+          <p>Discover the ultimate way to find your bus route and track its live location with our cutting-edge app/website!! </p>
+          <button id="button1">EXPLORE</button>
+        </div>
+      </div>
+
+      <div class="info-card2" data-aos="fade-down">
+        <div class="info-card2-image">
+          <img src="img/ticket.jpg">
+        </div>
+        <div class="info-card2-content">
+          <h3>BOOK YOUR TICKET</h3>
+          <p>Experience the easiest and most convenient way to book your bus tickets! Introducing our website that lets you book your bus tickets hassle-free.</p>
+          <button id="button2">EXPLORE</button>
+        </div>
+      </div>
+
+      <div class="info-card3" data-aos="fade-up">
+        <div class="info-card3-image">
+          <img src="img/store.jpg">
+        </div>
+        <div class="info-card3-content">
+          <h3>STORING YOUR DATA</h3>
+          <p>Store your user data, including your name, contact details, and payment information, making your booking process quicker and more efficient.</p>
+          <button id="button3">EXPLORE</button>
+        </div>
+      </div>
+
+      <div class="info-card4" data-aos="fade-up">
+        <div class="info-card4-image">
+          <img src="img/qr.png">
+        </div>
+        <div class="info-card4-content">
+          <h3>SAY GOODBYE!!TO PAPER TICKETS</h3>
+          <p>Introducing our new and convenient way of ticketing - QR tickets! .With QR tickets, accessing your favorite events has never been easier..</p>
+          <button id="button4">EXPLORE</button>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="container2">
+          
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="modal-child">
+            <ul>
+              <h1>DISCOVER THE ULTIMATE WAY TO FIND YOUR BUS ROUTE AND TRACK ITS LIVE LOCATION</h1><br><br>
+              <h3>SAY GOODBYE TO UNCERTAINTY AND HELLO TO SEAMLESS TRAVEL PLANNING. HERE'S WHY OUR PLATFORM IS YOUR GO-TO SOLUTION:</h3><br><br>
+              <li>Effortless route planning: our app/website provides a user-friendly interface that allows you to effortlessly plan your bus route. enter your starting point and destination, and our intelligent system will generate the most efficient and convenient bus route options for you.</li>
+              <li>Real-time bus tracking: no more waiting in uncertainty! our innovative technology enables you to track the live location of your bus in real time. simply open our app/website and get instant updates on the bus's current position, ensuring you're always aware of its whereabouts.</li>
+              <li>Estimated arrival times: worried about missing your bus? our app/website provides accurate estimated arrival times, so you can plan your journey accordingly. stay informed and be at the bus stop just in time to catch your ride.</li>
+              <li>Interactive maps: visualize your bus route with interactive maps on our app/website. see the entire route, including stops, landmarks, and any diversions, all at your fingertips. effortlessly navigate unfamiliar areas and reach your destination stress-free.</li>
+              <li>Alerts and notifications: stay connected and informed with our timely alerts and notifications. receive updates on any changes to your bus route, including delays, diversions, or cancellations. our system ensures you're always in the loop, empowering you to make informed decisions.</li>
+              <li>User-friendly experience: we've designed our app/website with you in mind. enjoy a seamless and intuitive user experience, enabling you to find your bus route and track its live location with ease. our interface is designed to make your journey planning a breeze.</li>
+              <li>Interactive maps: visualize your bus route with interactive maps on our app/website. see the entire route, including stops, landmarks, and any diversions, all at your fingertips. effortlessly navigate unfamiliar areas and reach your destination stress-free.</li>
+             </ul>
+          </div>
+        </div>
+      </div>
       
-    </form>
-    <button type="submit">Sign Up</button>
-
-</div>
-
-  </div>
-
-  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
-  <script src="firebase-config.js"></script>
-  <script src="register.js"></script>
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="modal-child">
+            <ul>
+              <h1>EXPERIENCE THE EASIEST AND MOST CONVENIENT WAY TO BOOK YOUR BUS TICKETS!!</h1><br><br>
+              <h3>OUR STATE-OF-THE-ART APP/WEBSITE THAT LETS YOU BOOK YOUR BUS TICKETS HASSLE-FREE, RIGHT AT YOUR FINGERTIPS.</h2>
+              <h3>WASTE TIME STANDING IN LONG QUEUES OR MAKING PHONE CALLS WHEN YOU CAN BOOK YOUR TICKETS IN JUST A FEW SIMPLE STEPS? WITH OUR APP/WEBSITE, YOU CAN:</h2><br><br>
+              <li>Browse and Select: Explore a wide range of bus routes, schedules, and operators. Find the perfect option that fits your travel plans.</li>
+              <li>Real-time Availability: Get instant updates on seat availability and choose your preferred seat from an interactive seating chart. No more guesswork or disappointment!</li>
+              <li>Easy Booking Process: Our user-friendly interface makes booking a breeze. Enter your departure and destination points, select your travel date, and let our app/website handle the rest.</li>
+              <li>Secure Payment Options: Enjoy peace of mind with our secure payment gateway. We offer multiple payment options, including credit/debit cards, net banking, and digital wallets, ensuring a seamless and safe transaction.</li>
+              <li>Digital Tickets: Say goodbye to paper tickets! Receive your e-ticket directly on your app/website, eliminating the hassle of carrying physical copies. It's convenient, eco-friendly, and always accessible.</li>
+              <li>Real-time Updates: Stay informed with real-time updates on bus timings, delays, or cancellations. Get notified via push notifications, SMS, or email, ensuring a smooth and stress-free journey.</li>
+              <li>24/7 Customer Support: Have any questions or need assistance? Our dedicated customer support team is available 24/7 to help you with any queries, ticket changes, or cancellations.</li>
+          </ul></div>
+        </div>
+      </div>
+      
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-child">
+              <ul>
+                <h1>CONVENIENCE: SAY GOODBYE TO THE HASSLE OF REPEATEDLY ENTERING YOUR INFORMATION EVERY TIME YOU BOOK A BUS TICKET.</h1><br><br>
+                <h3>PERSONALIZATION: OUR PLATFORM LETS YOU SAVE YOUR TRAVEL DETAILS, INCLUDING YOUR PREFERRED ROUTES AND SEAT PREFERENCES. THIS WAY, OUR APP/WEBSITE CAN PERSONALIZE YOUR TRAVEL EXPERIENCE AND OFFER YOU CUSTOMIZED OPTIONS THAT CATER TO YOUR NEEDS.</h3><br><br>
+                <li>Our app/website allows you to store your user data, including your name, contact details, and payment information, making your booking process quicker and more efficient</li>
+                <li>Time-Saving: With our app/website, you don't have to waste time searching for your previous travel details or digging through old emails. </li>
+                <li>Your travel information is saved in one place, making it easy for you to retrieve and reuse for future trips.</li>
+                <li>Security: We understand that your privacy and security are of utmost importance. That's why our app/website uses the latest encryption technology to safeguard your user data and travel information. You can rest assured that your data is safe with us.</li>
+                <li>Accessibility: Whether you're on the go or at home, you can access your stored user data and travel details from anywhere, anytime. Our app/website is available 24/7, ensuring that your information is always within reach.</li>
+                <li>Efficient Support: Our customer support team is always ready to assist you with any queries or issues related to your user data or travel details. With our platform, you can expect prompt and efficient support whenever you need it.</li>
+                <li>Seamless Booking: Our app/website simplifies the booking process, making it a seamless and stress-free experience. With your user data and travel details already stored, booking a bus ticket is just a few clicks away.</li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+        <div id="modal4" class="modal">
+          <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="modal-child">
+                <ul>
+                  <h1>The beauty of QR tickets lies in their simplicity and efficiency.</h1><br>
+                  <h3>imply save the ticket on your phone or print it out, and when you arrive at the event, our staff will scan the QR code using a dedicated scanner. Within seconds, you're granted hassle-free entry, skipping the need for manual ticket checks and paper-based processes.</h3><br>
+                  <li>QR tickets utilize Quick Response (QR) codes, which are scannable square codes that contain all the necessary information about your ticket. When you purchase a ticket through our website or mobile app, a unique QR code is generated and delivered to you instantly via email or accessible through your account.</li>
+                  <li>The beauty of QR tickets lies in their simplicity and efficiency. Simply save the ticket on your phone or print it out, and when you arrive at the event, our staff will scan the QR code using a dedicated scanner. Within seconds, you're granted hassle-free entry, skipping the need for manual ticket checks and paper-based processes.</li>
+                  <li>QR tickets offer numerous benefits for event-goers. Firstly, they provide a contactless and secure ticketing experience, ensuring a seamless entry process while prioritizing the health and safety of all attendees. No need to worry about misplaced or damaged tickets anymore - your QR code is conveniently stored on your device.</li>
+                  <li>Additionally, QR tickets save you valuable time. Gone are the days of fumbling through your bag or wallet to find your ticket. With a simple scan, you're in! Say goodbye to long wait times and hello to more time enjoying the event.</li>
+                  <li>QR tickets also contribute to sustainability efforts. By reducing paper waste associated with traditional ticketing, you're actively participating in environmental conservation.</li>
+                  <li>Join the QR ticket revolution and embrace the future of ticketing. Experience the speed, convenience, and security that QR tickets offer. Purchase your tickets today and get ready for a seamless and memorable event experience!</li>
+                </ul>
+                
+                
+              </div>
+            </div>
+          </div>
+    </div>
+     
+      
+    
+    
+    <script src="script.js"></script> 
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+      <script src="path/to/aos.js"></script>
+      <script>
+         AOS.init({
+          duration: 1500,
+          })
+      </script>
 </body>
+
+
+  
 </html>

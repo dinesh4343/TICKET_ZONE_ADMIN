@@ -1,85 +1,28 @@
-var button1 = document.getElementById('button1');
-var modal1 = document.getElementById("modal1");
-var span1 = document.getElementsByClassName("close")[0];
+// Fetch data from Realtime Database
+realtimeDB.ref("data").once("value", (snapshot) => {
+  const data = snapshot.val();
+  const tableBody = document.querySelector("#data-table tbody");
+  // Iterate over data and create table rows
+  let count = 1;
+  for (const key in data) {
+    if (Object.hasOwnProperty.call(data, key)) {
+      const row = document.createElement("tr");
+      const values = data[key];
 
-button1.onclick = function() {
-  modal1.style.display = "block";
-}
+      const propertiesOrder = ["name", "gender", "age", "mobileNo", "address"];
+      // Add column number cell
+      const colNumCell = document.createElement("td");
+      colNumCell.textContent = count;
+      row.appendChild(colNumCell);
+      // Add table data cells
+      for (const prop of propertiesOrder) {
+        const cell = document.createElement("td");
+        cell.textContent = values[prop];
+        row.appendChild(cell);
+      }
 
-span1.onclick = function() {
-  modal1.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal1) {
-    modal1.style.display = "none";
-  }
-}
-
-var button2= document.getElementById('button2');
-var modal2 = document.getElementById("modal2");
-var span2 = document.getElementsByClassName("close")[1];
-
-button2.onclick = function() {
-  modal2.style.display = "block";
-}
-
-span2.onclick = function() {
-  modal2.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal2) {
-    modal2.style.display = "none";
-  }
-}
-
-var button3 = document.getElementById('button3');
-var modal3 = document.getElementById("modal3");
-var span3 = document.getElementsByClassName("close")[2];
-
-button3.onclick = function() {
-  modal3.style.display = "block";
-}
-
-span3.onclick = function() {
-  modal3.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal3) {
-    modal3.style.display = "none";
-  }
-}
-
-
-var button4 = document.getElementById('button4');
-var modal4 = document.getElementById("modal4");
-var span4 = document.getElementsByClassName("close")[3];
-
-button4.onclick = function() {
-  modal4.style.display = "block";
-}
-
-span4.onclick = function() {
-  modal4.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal4) {
-    modal4.style.display = "none";
-  }
-}
-
-
-// Get the menu toggle checkbox element
-const menuToggle = document.querySelector('#menuToggle input');
-
-// Add click event listener to the document
-document.addEventListener('click', function(event) {
-  // Check if the clicked element is inside the menu or menu toggle
-  if (!event.target.closest('#menu') && !event.target.closest('#menuToggle')) {
-    // Uncheck the menu toggle checkbox to close the menu
-    menuToggle.checked = false;
+      tableBody.appendChild(row); // Append row to table body
+      count++; // Increment column number count
+    }
   }
 });

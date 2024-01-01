@@ -2,13 +2,15 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    overflow: hidden; 
-    background-color: black;/* Hide overflow to prevent scrollbars */
+   overflow-y: auto;
+   transition: background-color 0.3s ease;
+    background-color: black;
+    
   }
 
 
 
-  .content {
+  .content-bg{
     position: relative;
     z-index: 1;
     display: flex;
@@ -19,8 +21,102 @@ body {
   }
 
   
-  .content h1 {
-    text-align: center;
-  }
 
+  .container{
+    
   
+    right: 0;
+      
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    z-index: 1;
+    
+    
+   
+
+}
+
+.content {
+    position: relative;
+    color: #ffffff;
+
+}
+.card{
+  background-color: black;
+  color: #ffffff;
+}
+
+
+
+.card .icon-case {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.card i {
+  font-size: 36px; /* Adjust the font-size as needed */
+  color: #17e2f9; /* Adjust the color as needed */
+}
+
+
+.container .content .cards {
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 200px;
+}
+
+.container .content .cards .card {
+    width: 250px;
+    height: 150px;
+    
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card h3{
+text-align: center;
+}
+
+
+#login-chart {
+  width: 400px;
+  height: 300px;
+  margin: 20px;
+  background: yellowgreen;
+}
+
+
+@keyframes countAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#male-count , #female-count , #user-count{
+  
+  font-weight: bold;
+  animation: countAnimation 1s ease-out;
+}
+
+
+.box h1,span{
+  text-align: center;
+  color: #17e2f9;
+ 
+}

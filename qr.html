@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Display</title>
+
+    <!-- Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js"></script>
+
+    <style>
+        #qrCode {
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+            /* Add more styles as needed */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>QR Code Display</h1>
+
+    <!-- Placeholder for QR Code -->
+    <div id="qrCode"></div>
+
+    <!-- Firebase Configuration -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBB2czjpbpALPGx3GhR5LfoKS4iBHpptGQ",
+    authDomain: "tickets-12578.firebaseapp.com",
+    databaseURL: "https://tickets-12578-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "tickets-12578",
+    storageBucket: "tickets-12578.appspot.com",
+    messagingSenderId: "826244609515",
+    appId: "1:826244609515:web:8565ad3e89913876b555ae"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Reference to the 'qrcodes' collection
+        const qrcodesRef = firebase.database().ref('qrcodes');
+
+        // Event listener for changes in the data
+        qrcodesRef.on('value', (snapshot) => {
+            const qrData = snapshot.val();
+
+            // Check if data exists
+            if (qrData) {
+                // Assuming the QR data is a single string
+                const qrCodeValue = qrData.value;
+
+                // Display QR code value in the HTML
+                document.getElementById('qrCode').innerText = qrCodeValue;
+            } else {
+                // Handle the case when no data is available
+                document.getElementById('qrCode').innerText = "No QR code available.";
+            }
+        });
+    </script>
+</body>
+</html>

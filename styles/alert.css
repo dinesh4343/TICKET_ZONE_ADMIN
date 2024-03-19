@@ -1,0 +1,117 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Apply Roboto font to the body */
+* {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Dark background color */
+  color: #fff; /* Light text color */
+  margin: 0; /* Remove default body margin */
+
+}
+html{
+  background-color: #000;
+}
+
+.head{
+  background-color: #000;
+
+}
+
+table {
+    width: 100%;
+    border-collapse:separate;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #111; /* Dark table background color */
+    color: #fff; /* Light table text color */
+  }
+  
+
+  th, td {
+    padding: 8px;
+  
+    background-color: #000;
+    font-size: large;
+    line-height: 250%;
+  }
+
+  th {
+    background-color: #000;
+    color: #00498a;
+    text-align: center;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    th, td {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+  
+  
+  .button {
+    --color: #007F;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    
+   }
+   
+   .button::before, .button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+   }
+   
+   .button::before {
+    top: -1em;
+    left: -1em;
+   }
+   
+   .button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+   }
+   
+   .button:hover::before, .button:hover::after {
+    height: 410px;
+    width: 410px;
+   
+    
+   }
+   
+   .button:hover {
+    color: rgb(10, 25, 30);
+   }
+   
+   .button:active {
+    filter: brightness(.8);
+   }
+   
+   .a:hover{
+    color: white;
+   }
+  
+   
